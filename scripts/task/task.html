@@ -1,0 +1,21 @@
+<div style="width:100%;overflow: hidden;" layout="column" flex="" layout-fill="" ng-cloak="">
+    <md-toolbar md-scroll-shrink="">
+        <div class="md-toolbar-tools">My Tasks</div>
+    </md-toolbar>
+    <md-content>
+        <section>
+            <div>Total Effort: {{_ctrl.totalEffort}}</div>
+            <md-list layout-padding="">
+                <md-list-item class="md-3-line" ng-repeat="task in _ctrl.tasks">
+                    <div class="md-list-item-text">
+                        <h3>{{task.taskName}}</h3>
+                        <h4>{{task.backlogName}}</h4>
+                        <p>
+                            Effort: {{task.effort}}
+                        </p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </section>
+    </md-content>
+</div>
