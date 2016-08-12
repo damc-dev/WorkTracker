@@ -8,18 +8,12 @@
             <md-datepicker ng-model="vm.startDate" md-placeholder="Enter date"></md-datepicker>
             <md-datepicker ng-model="vm.endDate" md-placeholder="Enter date"></md-datepicker>
             <md-button class="md-raised md-info" ng-click="vm.getWorkSummary()">Update</md-button>
-        </section> 
-        <section layout="row" layout-align="center center" layout-wrap>
-            <md-button class="md-raised md-info" ng-click="count = count + 1; $log.info('Testing123')" ng-init="count=0">{{count}}</md-button>
-                    <button type="button"
-onclick="document.getElementById('demo').innerHTML = Date(); console.log(Date())">
-Click me to display Date and Time.</button><p id="demo"></p>
-        </section> 
+        </section>
         <section>
             <md-list layout-padding="">
                 <md-list-item class="md-3-line">
                     <div class="md-list-item-text">
-                        <h3>Total Effort: {{vm.totalEffort}}</h3>
+                        <h3><str>Total Effort: {{vm.totalEffort}}<str></h3>
                     </div>
                 </md-list-item>
                 <md-list-item class="md-3-line" ng-repeat="backlog in vm.backlogs">
@@ -30,7 +24,6 @@ Click me to display Date and Time.</button><p id="demo"></p>
                         </p>
                     </div>
                 </md-list-item>
-
             </md-list>
         </section>
     </md-content>

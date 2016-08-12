@@ -32,6 +32,7 @@ class WorkSummaryService {
                             effort: effort.toFixed(2)
                         };
                     });
+                    console.log("Service.getWorkSummary(%s, %s) returning: ", startDate, endDate, backlogs);
                 deferred.resolve(backlogs);
             });
             return deferred.promise

@@ -13,7 +13,6 @@
             $routeProvider.when('/', {
                 templateUrl: _templateBase + '/work-summary/work-summary.html' ,
                 controller: 'workSummaryController'
-                //, controllerAs: '_ctrl'
             });
             $routeProvider.otherwise({ redirectTo: '/' });
         }
