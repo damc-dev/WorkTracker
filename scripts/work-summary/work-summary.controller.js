@@ -25,9 +25,8 @@ class WorkSummaryController {
     getWorkSummary() {
         var vm = this;
         vm.workSummaryService.getWorkSummary(vm.startDate, vm.endDate).then(function (backlogs) {
-            console.log(backlogs);
             vm.backlogs = [].concat(backlogs);
-            console.log("Self.backlogs", vm.backlogs)
+            console.log("vm.backlogs", vm.backlogs)
             vm.selected = backlogs[0];
             
             if (backlogs.length > 0 ) {
@@ -36,9 +35,25 @@ class WorkSummaryController {
                 }).reduce(function (previous, current) {
                     return parseFloat(previous) + parseFloat(current);
                 });
+            } else {
+                vm.totalEffort = 0;
             }
         });
-    }    
+    }
+    
+    getSummaryYesterday() {
+        var vm = this;
+        vm.startDate = addDays(new Date(), -1);
+        vm.endDate = addDays(vm.startDate, 1);
+        vm.getWorkSummary();
+    }
+    
+    getSummaryToday() {
+        var vm = this;
+        vm.startDate = new Date()
+        vm.endDate = addDays(vm.startDate, 1);
+        vm.getWorkSummary();
+    }
     
     helloWorld(){
         console.log("Hello World");

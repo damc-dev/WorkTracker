@@ -5,6 +5,8 @@
 
     <md-content>
         <section layout="row" layout-align="center center" layout-wrap>
+            <md-button class="md-raised md-info" ng-click="vm.getSummaryYesterday()">Yesterday</md-button>
+            <md-button class="md-raised md-info" ng-click="vm.getSummaryToday()">Today</md-button>
             <md-datepicker ng-model="vm.startDate" md-placeholder="Enter date"></md-datepicker>
             <md-datepicker ng-model="vm.endDate" md-placeholder="Enter date"></md-datepicker>
             <md-button class="md-raised md-info" ng-click="vm.getWorkSummary()">Update</md-button>
