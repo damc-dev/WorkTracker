@@ -54,10 +54,6 @@ class WorkSummaryController {
         vm.endDate = addDays(vm.startDate, 1);
         vm.getWorkSummary();
     }
-    
-    helloWorld(){
-        console.log("Hello World");
-    }
 }
 
 angular.module('app')

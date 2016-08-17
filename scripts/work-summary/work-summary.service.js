@@ -94,5 +94,5 @@ filter:
             return deferred.promise;
         }
 }
- angular.module('app')
+angular.module('app')
         .service('workSummaryService', ['$q', WorkSummaryService]);
